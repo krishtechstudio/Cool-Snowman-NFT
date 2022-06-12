@@ -67,7 +67,7 @@ export default function Collection() {
         <Box display={'flex'} flexWrap={'wrap'} p={'50px'} justifyContent={'space-evenly'}>
                 {balance ? balance.map((item) => {
                     return (
-                        <Box borderRadius={'lg'} bgColor={'gray.700'} p={'20px'} display={'flex'} flexDirection={'column'}>
+                        <Box borderRadius={'lg'} bgColor={'gray.700'} p={'20px'} display={'flex'} flexDirection={'column'} key={item.id}>
                             <Image src={item.url} borderRadius={'2xl'} alt={'Snowman'} width={'200px'} />
                             <Text fontSize={'20px'} as={'b'} mt={'10px'}>Cool Snowman #{item.id}</Text>
                         </Box>

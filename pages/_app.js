@@ -6,11 +6,6 @@ import Web3 from 'web3';
 function MyApp({ Component, pageProps }) {
 
   const theme = extendTheme({
-    fonts: {
-      body: "Poppins, sans-serif",
-      heading: "Poppins, sans-serif",
-      mono: "Poppins, sans-serif",
-    },
     config: {
       initialColorMode: 'dark',
     },
