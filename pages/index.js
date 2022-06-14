@@ -134,7 +134,7 @@ export default function Home() {
       <Box display={'flex'} alignItems={'center'} justifyContent={'center'} minHeight={'100vh'}>
         <Box>
           <Box borderRadius={'lg'} bgColor={'gray.700'} p={'20px'} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
-            <Image src={'http://localhost:3000/snowman.gif'} borderRadius={'2xl'} alt={'MetaMask'} width={'200px'}/>
+            <Image src={'https://cool-snowman-nft.vercel.app/snowman.gif'} borderRadius={'2xl'} alt={'MetaMask'} width={'200px'}/>
             <Text as={'b'} fontSize={'20px'} mt={'15px'}>Get your Snowman</Text>
             {active ? <Box>
               {price ? <Button mt={'10px'} width={'100%'} colorScheme='yellow' isLoading={isLoading} onClick={checkMax}>Mint</Button> : <Skeleton mt={'10px'} height={'35px'} width={'200px'}></Skeleton>}
