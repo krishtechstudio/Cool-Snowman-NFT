@@ -64,10 +64,10 @@ export default function Collection() {
         {isLoading ? <CircularProgress /> : null}
         {active ?
         <Box>
-        <Box display={'flex'} flexWrap={'wrap'} p={'50px'} justifyContent={'space-evenly'}>
+        <Box display={'flex'} flexWrap={'wrap'} p={'40px'} justifyContent={['center', 'center', 'flex-start']}>
                 {balance ? balance.map((item) => {
                     return (
-                        <Box borderRadius={'lg'} bgColor={'gray.700'} p={'20px'} display={'flex'} flexDirection={'column'} key={item.id}>
+                        <Box borderRadius={'lg'} bgColor={'gray.700'} p={'20px'} display={'flex'} flexDirection={'column'} key={item.id} marginLeft={['0','0','20px']} marginTop={'10px'}>
                             <Image src={item.url} borderRadius={'2xl'} alt={'Snowman'} width={'200px'} />
                             <Text fontSize={'20px'} as={'b'} mt={'10px'}>Cool Snowman #{item.id}</Text>
                         </Box>
