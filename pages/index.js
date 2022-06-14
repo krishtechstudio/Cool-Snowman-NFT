@@ -109,7 +109,10 @@ export default function Home() {
   }
 
   useEffect(() => {
-    connect()
+    connect();
+  }, [])
+
+  useEffect(() => {
     try {
     const contract = new library.eth.Contract(ABI, address)
     setContract(contract);
