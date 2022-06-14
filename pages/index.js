@@ -128,7 +128,7 @@ export default function Home() {
       <Head>
         <title>{active ? "Mint | Cool Snowman NFTs" : "Login | Cool Snowman NFTs"}</title>
       </Head>
-      <Box p={'10px'} fontSize={'20px'} display={'flex'} justifyContent={'space-between'}>SnowMan NFT <Button onClick={active ? deactivate : connect}>{active ? account : "Connect"}</Button></Box>
+      <Box p={'10px'} fontSize={'20px'} display={'flex'} justifyContent={'space-between'}>SnowMan NFT <Text onClick={active ? deactivate : connect} width={['150px', 'auto', 'auto']} overflow={'hidden'} whiteSpace={'nowrap'} textOverflow={'ellipsis'} padding={'10px'} background={'gray.700'} borderRadius={'xl'} fontSize={'15px'} _hover={{backgroundColor: 'gray.600'}}>{active ? account : "Connect"}</Text></Box>
       {error ? <Alert status={'error'}><AlertIcon />{error}</Alert> : null}
       {success ? <Alert status={'success'}><AlertIcon />{success}</Alert> : null}
       <Box display={'flex'} alignItems={'center'} justifyContent={'center'} minHeight={'100vh'}>
