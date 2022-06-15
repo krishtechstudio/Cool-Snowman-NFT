@@ -32,7 +32,10 @@ export default function Collection() {
   }
 
   useEffect(() => {
-    connect()
+    connect();
+  }, [])
+
+  useEffect(() => {
     try {
         const contract = new library.eth.Contract(ABI, address)
         setContract(contract);
