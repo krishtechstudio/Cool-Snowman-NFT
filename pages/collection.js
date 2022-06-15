@@ -59,7 +59,7 @@ export default function Collection() {
       </Head>
       {error ? <Alert status={'error'}><AlertIcon />{error}</Alert> : null}
       {success ? <Alert status={'success'}><AlertIcon />{success}</Alert> : null}
-      <Box p={'10px'} fontSize={'20px'} display={'flex'} justifyContent={'space-between'}>SnowMan NFT <Text onClick={active ? deactivate : connect} width={['150px', 'auto', 'auto']} overflow={'hidden'} whiteSpace={'nowrap'} textOverflow={'ellipsis'} padding={'10px'} background={'gray.700'} borderRadius={'xl'} fontSize={'15px'} _hover={{backgroundColor: 'gray.600'}}>{active ? account : "Connect"}</Text></Box>
+      <Box p={'10px'} fontSize={'20px'} display={'flex'} justifyContent={'space-between'}>SnowMan NFT <Text onClick={active ? deactivate : connect} width={['150px', 'auto', 'auto']} overflow={'hidden'} whiteSpace={'nowrap'} textOverflow={'ellipsis'} padding={'10px'} background={'gray.700'} borderRadius={'xl'} fontSize={'15px'} _hover={{backgroundColor: 'gray.600'}} cursor={'pointer'}>{active ? account : "Connect"}</Text></Box>
       <Box minHeight={'100vh'}>
         {isLoading ? <CircularProgress /> : null}
         {active ?
