@@ -20,7 +20,7 @@ export default function Home() {
   const [contract, setContract] = useState();
 
   const address = "0x113b7C63E2E2eeB896B74403b5F800B06F5A9377";
-  const maxMint = 10;
+  const maxMint = 20;
 
   
   async function connect() {
@@ -35,7 +35,6 @@ export default function Home() {
     try {
     contract.methods.balanceOf(account).call().then(balance => {
       setLoading(true);
-      console.log(balance);
         if (balance >= maxMint) {
             setLoading(false);
             setError("You have reached the maximum amount of Snowmen you can own. Please sell some Snowmen to gain more.");
