@@ -52,12 +52,11 @@ export default function Home() {
   async function mint() {
     setLoading(true);
     try {
-      contract.methods.mint(1).send({ from: account, gas: 1000000, value: web3.utils.toWei('0.01', 'ether') })
-      .on('transactionHash', function(hash) {
-        console.log(hash)
-      })
-      .on('confirmation', function(confirmationNumber, receipt) {
-        console.log(receipt)
+      library.eth.sendTransaction({
+        from: account,
+        to: '0xdCD83ff826ebA1765bdD2fa1C14e8dcF217Aa480',
+        value: web3.utils.toWei('0.01', 'ether'),
+        gas: 300000,
       })
       .on('receipt', function(receipt) {
         console.log(receipt)
